@@ -1,0 +1,8 @@
+## Interface: 30400
+## Title: GearSpecSwap
+## Author: Jestter
+## Version: 1.0.0
+## SavedVariablesPerCharacter: GearSpecSwapData
+## Notes: auto swap gear when you change spec (WotLK) and other QoL features
+
+GearSpecSwap.lua
