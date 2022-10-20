@@ -59,16 +59,12 @@ local function Unlink(spec)
 	GearSpecSwapData[spec] = nil
 end
 
-GameTooltip:HookScript('OnTooltipSetItem', function(self)
+GameTooltip:HookScript('OnUpdate', function(self)
 	if not IsAltKeyDown() then return end
-
-	local item, link = self:GetItem()
-	--make sure we have an item to work with
-	if not item and not link then return end
 
 	local owner = self:GetOwner() --get the owner of the tooltip
 
-	--if it's the character frames <alt> equipment switch then ignore it
+	--only when its an equipped slot
 	if owner and owner:GetName() and strfind(string.lower(owner:GetName()), "character") and strfind(string.lower(owner:GetName()), "slot") then 
 		PaperDollFrameItemFlyout_Show(self:GetOwner())
 		self:Hide()

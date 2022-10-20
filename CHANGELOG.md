@@ -1,3 +1,7 @@
+`v1.0.1` | __2022-10-20__
+
+    - Issue 1: ALT not working when there is no item equiped -- SOLVED
+
 `v1.0.0` | __2022-10-20__
 
     - First version!
