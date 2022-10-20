@@ -79,6 +79,7 @@ frame:SetScript("OnEvent", frame.OnEvent);
 
 SLASH_GSS1 = "/gss";
 SLASH_GSS2 = "/gearswap";
+SLASH_GSS3 = "/GearSpecSwap";
 
 SlashCmdList["GSS"] = function(msg)
 	local _, _, cmd, args = string.find(msg, "%s?(%w+)%s?(.*)")
@@ -92,8 +93,8 @@ SlashCmdList["GSS"] = function(msg)
 		Unlink(args)
 	else
 		print("|cff03C6FC-- GearSpecSwap help --|r")
-		print("|cff00FF00/GearSpecSwap|r |cffFFA90Alink spec_num equipment_set_name|r -- create the autoequip link between the given spec and equipment set. |cffFFA90Aie. gss link 1 main|r (load set called \"main\" when swap to first spec)")
-		print("|cff00FF00/GearSpecSwap|r |cffFFA90Aunlink spec_num|r -- remove the autoequip link for an spec. |cffFFA90Aie. fss unlink 1|r (remove the link for the first spec)")
+		print("|cff00FF00/gss|r |cffFFA90Alink spec_num equipment_set_name|r -- create the autoequip link between the given spec and equipment set. |cffFFA90Aie. gss link 1 main|r (load set called \"main\" when swap to first spec)")
+		print("|cff00FF00/gss|r |cffFFA90Aunlink spec_num|r -- remove the autoequip link for an spec. |cffFFA90Aie. gss unlink 1|r (remove the link for the first spec)")
 	end
 
 end
