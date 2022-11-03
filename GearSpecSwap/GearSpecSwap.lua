@@ -65,7 +65,7 @@ GameTooltip:HookScript('OnUpdate', function(self)
 	local owner = self:GetOwner() --get the owner of the tooltip
 
 	--only when its an equipped slot
-	if owner and owner:GetName() and strfind(string.lower(owner:GetName()), "character") and strfind(string.lower(owner:GetName()), "slot") then 
+	if owner and owner:GetName() and not strfind(string.lower(owner:GetName()), "ammo") and strfind(string.lower(owner:GetName()), "character") and strfind(string.lower(owner:GetName()), "slot") then 
 		PaperDollFrameItemFlyout_Show(self:GetOwner())
 		self:Hide()
 	end
